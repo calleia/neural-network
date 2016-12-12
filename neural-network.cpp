@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
+#include<time.h>
 
 
 //Constants
@@ -33,6 +34,7 @@ int main()
   double thresholds[ARRAYSIZE];
 
   //Initialization
+  srand(time(NULL));//Initialize random seed
   initialize(weights, values, expectedValues, thresholds);
   connectNodes(weights, thresholds);
 
